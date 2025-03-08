@@ -9,7 +9,7 @@ class Dashboard(ctk.CTk):
 
     def intro(self):
         frame_intro = ctk.CTkFrame(self)
-
+#Making changes to see if it works
         for i in range(3):
             frame_intro.rowconfigure(i, weight=1)
 
