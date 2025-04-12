@@ -1,11 +1,13 @@
-// app/signup/page.tsx
 'use client'
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function SignUpPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('');
+  const [error, setError] = useState('');
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,9 +23,16 @@ export default function SignUpPage() {
 
     const data = await response.json();
     if (response.ok) {
+      // Sign-up successful, redirect user based on role
       alert('Sign-up successful!');
+      if (role === 'student') {
+        router.push('/studentDashboard');
+      } else if (role === 'teacher') {
+        router.push('/teacherDashboard');
+      }
     } else {
       alert(`Error: ${data.error}`);
+      setError(data.error || 'An error occurred');
     }
   };
 
@@ -71,6 +80,7 @@ export default function SignUpPage() {
               <option value="teacher">Teacher</option>
             </select>
           </div>
+          {error && <p className="text-red-500 text-sm">{error}</p>}
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition"

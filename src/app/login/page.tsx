@@ -11,7 +11,7 @@ export default function LoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
+  
     try {
       const response = await fetch('/api/login', {
         method: 'POST',
@@ -20,12 +20,24 @@ export default function LoginPage() {
         },
         body: JSON.stringify({ email, password }),
       })
-
+  
       const data = await response.json()
-
+  
       if (response.ok) {
-        // Successful login, redirect or update state
-        router.push('/dashboard') // Adjust the redirection path as necessary
+        // Fetch the auth_user_id from the response and use it to get the role
+        const userResponse = await fetch(`/api/getUserRole?authUserId=${data.user.id}`)
+        const userData = await userResponse.json()
+  
+        if (userResponse.ok && userData.role) {
+          // Redirect based on the role
+          if (userData.role === 'teacher') {
+            router.push('/teacherDashboard')
+          } else {
+            router.push('/studentDashboard')
+          }
+        } else {
+          setError(userData.error || 'Unable to fetch user role.')
+        }
       } else {
         setError(data.error || 'Login failed')
       }
@@ -33,6 +45,8 @@ export default function LoginPage() {
       setError('An unexpected error occurred.')
     }
   }
+  
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
