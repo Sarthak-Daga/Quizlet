@@ -1137,7 +1137,6 @@ function StudentListItem({ name, score }: {
       </div>
       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
         parseInt(score) >= 80 ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
-      }`}>
         {score}
       </span>
     </div>
