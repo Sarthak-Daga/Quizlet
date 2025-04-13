@@ -26,7 +26,7 @@ export default function SignUpPage() {
       // Sign-up successful, redirect user based on role
       alert('Sign-up successful!');
       if (role === 'student') {
-        router.push('/studentDashboard');
+        router.push('/student');
       } else if (role === 'teacher') {
         router.push('/teacherDashboard');
       }

@@ -33,7 +33,7 @@ export default function LoginPage() {
           if (userData.role === 'teacher') {
             router.push('/teacherDashboard')
           } else {
-            router.push('/studentDashboard')
+            router.push('/student')
           }
         } else {
           setError(userData.error || 'Unable to fetch user role.')
