@@ -6,17 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c0078cca-2fc1-4959-80cf-d31d3871a30d" name="Changes" comment="First Commit , Project Setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/students/attempt/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/stdent/dashboard/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/students/doubts/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/student/dashboard/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/students/profile/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/student/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/students/quizzes/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/student/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/students/results/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/signup/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/signup/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/studentDashboard/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/studentDashboard/quiz/[id]/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/supabaseClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/supabaseClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/stdent/quiz/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/stdent/quiz/[id]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/student/quiz/[quizId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/student/quiz/[quizId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/teacherDashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/teacherDashboard/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/statCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/statCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +91,7 @@
       <workItem from="1744532464683" duration="437000" />
       <workItem from="1744532935276" duration="573000" />
       <workItem from="1744548738083" duration="3260000" />
+      <workItem from="1744618880882" duration="4510000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit , Project Setup">
       <option name="closed" value="true" />
