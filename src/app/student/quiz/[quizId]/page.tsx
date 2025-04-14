@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useParams } from 'next/navigation';
+
 
 interface Question {
   id: string;
@@ -14,46 +16,47 @@ interface QuizData {
 }
 
 export default function QuizPage() {
+    const params = useParams();
+    const quizId = params?.quiz_id as string;
   const [data, setData] = useState<QuizData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<"initial" | "fetching" | "success" | "error">("initial");
 
   const [answers, setAnswers] = useState<Record<string, string>>({}); // To store user answers
 
-  useEffect(() => {
-    console.log("Starting fetch with hardcoded ID");
-    setStatus("fetching");
+    useEffect(() => {
+        if (!quizId) return;
 
-    const hardcodedId = "f19e3f8d-9f0d-45c5-a1ae-b2e73cd8cd9b";
-    const url = `/api/stdent/quiz/${hardcodedId}`;
-    console.log("Fetching from URL:", url);
+        console.log("Fetching quiz ID:", quizId);
+        setStatus("fetching");
 
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
-        .then(res => {
-          console.log("Response status:", res.status);
-          if (!res.ok) {
-            throw new Error(`API returned ${res.status}`);
-          }
-          return res.json();
+        const url = `/api/student/quiz/${quizId}`;
+
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
         })
-        .then((json: QuizData) => {
-          console.log("Fetched data:", json);
-          setData(json);
-          setStatus("success");
-        })
-        .catch(err => {
-          console.error("Fetch error:", err);
-          setError(err instanceof Error ? err.message : String(err));
-          setStatus("error");
-        });
-  }, []);
+            .then(res => {
+                if (!res.ok) throw new Error(`API returned ${res.status}`);
+                return res.json();
+            })
+            .then((json: Question[]) => {
+                console.log("Fetched quiz data:", json);
+                setData({ question: json }); // wrap it in the expected shape
+                setStatus("success");
+            })
+            .catch(err => {
+                console.error("Fetch error:", err);
+                setError(err instanceof Error ? err.message : String(err));
+                setStatus("error");
+            });
 
-  const handleOptionChange = (questionId: string, option: string) => {
+    }, [quizId]);
+
+
+    const handleOptionChange = (questionId: string, option: string) => {
     setAnswers(prevAnswers => ({
       ...prevAnswers,
       [questionId]: option,

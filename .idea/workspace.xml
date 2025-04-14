@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0078cca-2fc1-4959-80cf-d31d3871a30d" name="Changes" comment="I am done with this project..">
+    <list default="true" id="c0078cca-2fc1-4959-80cf-d31d3871a30d" name="Changes" comment="Jaydeep Man!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/getUserRole/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/getUserRole/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/login/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/signup/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/signup/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/stdent/dashboard/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/stdent/dashboard/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/stdent/performance/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/stdent/performance/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/stdent/quiz/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/stdent/quiz/[id]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/stdent/quizzes/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/stdent/quizzes/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/student/quiz/[quizId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/student/quiz/[quizId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/teacherDashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/teacherDashboard/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/supabaseClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/supabaseClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +97,7 @@
       <workItem from="1744618880882" duration="4510000" />
       <workItem from="1744628143027" duration="4126000" />
       <workItem from="1744633624860" duration="144000" />
-      <workItem from="1744634293122" duration="1924000" />
+      <workItem from="1744634293122" duration="6731000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit , Project Setup">
       <option name="closed" value="true" />
@@ -123,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744628273764</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Jaydeep Man!!">
+      <option name="closed" value="true" />
+      <created>1744637002273</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744637002273</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +133,7 @@
     <MESSAGE value="First Commit , Project Setup" />
     <MESSAGE value="I am done with this project" />
     <MESSAGE value="I am done with this project.." />
-    <option name="LAST_COMMIT_MESSAGE" value="I am done with this project.." />
+    <MESSAGE value="Jaydeep Man!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jaydeep Man!!" />
   </component>
 </project>
