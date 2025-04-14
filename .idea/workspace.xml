@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0078cca-2fc1-4959-80cf-d31d3871a30d" name="Changes" comment="First Commit , Project Setup">
+    <list default="true" id="c0078cca-2fc1-4959-80cf-d31d3871a30d" name="Changes" comment="I am done with this project..">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/getUserRole/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/getUserRole/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/login/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/signup/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/signup/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/stdent/dashboard/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/stdent/dashboard/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/stdent/performance/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/stdent/performance/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/stdent/quiz/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/stdent/quiz/[id]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/stdent/quizzes/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/stdent/quizzes/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/student/quiz/[quizId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/student/quiz/[quizId]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/teacherDashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/teacherDashboard/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/statCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/statCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/supabaseClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/supabaseClient.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +51,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2u4IhkWT2aVD0qBffMwd81lKSQp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
@@ -92,6 +103,9 @@
       <workItem from="1744532935276" duration="573000" />
       <workItem from="1744548738083" duration="3260000" />
       <workItem from="1744618880882" duration="4510000" />
+      <workItem from="1744628143027" duration="4126000" />
+      <workItem from="1744633624860" duration="144000" />
+      <workItem from="1744634293122" duration="1924000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit , Project Setup">
       <option name="closed" value="true" />
@@ -101,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741502104282</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="I am done with this project">
+      <option name="closed" value="true" />
+      <created>1744628273764</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744628273764</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +131,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit , Project Setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit , Project Setup" />
+    <MESSAGE value="I am done with this project" />
+    <MESSAGE value="I am done with this project.." />
+    <option name="LAST_COMMIT_MESSAGE" value="I am done with this project.." />
   </component>
 </project>

@@ -65,7 +65,7 @@ export default function QuizPage() {
     // You can handle the submission logic here, such as sending answers to the backend for evaluation
   };
 
-  console.log("Render state:", { status, hasData: !!data, error });
+  console.log("Render state:", {status, hasData: !!data, error});
 
   if (status === "fetching") {
     return <div>Loading quiz data...</div>;
@@ -80,20 +80,58 @@ export default function QuizPage() {
   }
 
   return (
-      <div style={{ padding: "20px" }}>
-        <h1>Quiz (Hardcoded ID)</h1>
+      <div style={{
+        padding: "30px",
+        maxWidth: "800px",
+        margin: "40px auto",
+        backgroundColor: "#f9f9f9",
+        borderRadius: "16px",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+        fontFamily: "Segoe UI, sans-serif"
+      }}>
+        <h1 style={{
+          fontSize: "28px",
+          marginBottom: "30px",
+          textAlign: "center",
+          color: "#333"
+        }}>
+          🧠 Quiz Time!
+        </h1>
+
         {data.questions.map((question) => (
-            <div key={question.id} style={{ marginBottom: "20px" }}>
-              <h3>{question.question_text}</h3>
+            <div
+                key={question.id}
+                style={{
+                  marginBottom: "30px",
+                  padding: "20px",
+                  backgroundColor: "#ffffff",
+                  borderRadius: "12px",
+                  boxShadow: "0 2px 6px rgba(0,0,0,0.05)"
+                }}
+            >
+              <h3 style={{marginBottom: "15px", color: "#222"}}>{question.question_text}</h3>
               <div>
                 {question.options.map((option, index) => (
-                    <label key={index} style={{ display: "block", marginBottom: "10px" }}>
+                    <label
+                        key={index}
+                        style={{
+                          display: "block",
+                          marginBottom: "10px",
+                          padding: "10px 15px",
+                          backgroundColor:
+                              answers[question.id] === option ? "#d0f0c0" : "#f0f0f0",
+                          borderRadius: "8px",
+                          cursor: "pointer",
+                          transition: "background-color 0.2s ease"
+                        }}
+                    >
                       <input
                           type="radio"
                           name={`question-${question.id}`}
                           value={option}
                           checked={answers[question.id] === option}
                           onChange={() => handleOptionChange(question.id, option)}
+                          style={{marginRight: "10px"}}
                       />
                       {option}
                     </label>
@@ -101,7 +139,26 @@ export default function QuizPage() {
               </div>
             </div>
         ))}
-        <button onClick={handleSubmit}>Submit</button>
+
+        <button
+            onClick={handleSubmit}
+            style={{
+              display: "block",
+              width: "100%",
+              padding: "15px",
+              fontSize: "16px",
+              backgroundColor: "#007bff",
+              color: "#fff",
+              border: "none",
+              borderRadius: "10px",
+              cursor: "pointer",
+              transition: "background-color 0.3s ease"
+            }}
+            onMouseOver={(e) => (e.target as HTMLButtonElement).style.backgroundColor = "#0056b3"}
+            onMouseOut={(e) => (e.target as HTMLButtonElement).style.backgroundColor = "#007bff"}
+        >
+          🚀 Submit Quiz
+        </button>
       </div>
   );
 }

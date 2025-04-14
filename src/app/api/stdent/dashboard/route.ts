@@ -1,16 +1,19 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabaseClient";  // Correctly import the initialized supabase client
+import { createClient } from "@/lib/supabaseServer";  // Correctly import the initialized supabase client
 
 // Mock student ID for now
-const mockStudentId = "3ffb29d7-e71b-4bec-92d2-c91c9b5ae640";  // Replace with a mock UUID
+// const mockStudentId = "3ffb29d7-e71b-4bec-92d2-c91c9b5ae640";  // Replace with a mock UUID
 
 export async function GET() {
+    const supabase = await createClient();
+    const user = (await supabase.auth.getUser()).data.user?.id;
+
     try {
         // Total quizzes attempted
         const { data: submissions, error: subError } = await supabase
             .from("submissions")
             .select("*")
-            .eq("student_id", mockStudentId);
+            .eq("student_id", user);
 
         if (subError) throw subError;
 
@@ -22,7 +25,7 @@ export async function GET() {
         const { data: attendanceData, error: attError } = await supabase
             .from("attendance")
             .select("*")
-            .eq("student_id", mockStudentId);
+            .eq("student_id", user);
 
         if (attError) throw attError;
 

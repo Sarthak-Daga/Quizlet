@@ -1,8 +1,9 @@
 // app/api/student/quiz/[id]/route.ts
-import { supabase } from "@/lib/supabaseClient";
+import { createClient } from "@/lib/supabaseServer";
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request) {
+  const supabase = await createClient()
   // Extract the ID from the URL path
   const url = new URL(req.url);
   const pathParts = url.pathname.split('/');

@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import StatCard from "@/components/statCard"; // Your custom stat card component
-import EmptyState from "@/components/EmptyState"; // Your empty state component
+import StatCard from "@/components/statCard";
+import EmptyState from "@/components/EmptyState";
 
 type TeacherDashboardData = {
     totalQuizzes: number;
@@ -19,7 +19,7 @@ export default function TeacherDashboardPage() {
     useEffect(() => {
         async function fetchDashboard() {
             try {
-                const res = await fetch("/api/teacher/stats"); // Correct API endpoint for teacher
+                const res = await fetch("/api/teacher/stats");
                 const json = await res.json();
                 setData(json);
             } catch (error) {
@@ -35,13 +35,14 @@ export default function TeacherDashboardPage() {
     if (!data) return <EmptyState message="No dashboard data found." />;
 
     return (
-        <div className="space-y-6">
+        <>
+            <h1 className="text-3xl font-bold mb-6 text-blue-900">📊 Dashboard Overview</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <StatCard title="Total Quizzes" value={data.totalQuizzes.toString()} icon="📝" />
                 <StatCard title="Total Students" value={data.totalStudents.toString()} icon="👩‍🎓" />
                 <StatCard title="Attendance Rate" value={`${data.attendanceRate}%`} icon="🎯" />
                 <StatCard title="Average Mark" value={`${data.averageMark}%`} icon="📊" />
             </div>
-        </div>
+        </>
     );
 }
