@@ -17,20 +17,23 @@ interface QuizData {
 
 export default function QuizPage() {
     const params = useParams();
-    const quizId = params?.quiz_id as string;
+    const quizId = params?.quizId as string;
   const [data, setData] = useState<QuizData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<"initial" | "fetching" | "success" | "error">("initial");
 
   const [answers, setAnswers] = useState<Record<string, string>>({}); // To store user answers
 
+    console.log("params:" , params);
+    console.log("quizid:" , quizId);
+
     useEffect(() => {
         if (!quizId) return;
 
-        console.log("Fetching quiz ID:", quizId);
-        setStatus("fetching");
+        // console.log("Fetching quiz ID:", quizId);
+        // setStatus("fetching");
 
-        const url = `/api/student/quiz/${quizId}`;
+        const url = `/api/stdent/quiz/${quizId}`;
 
         fetch(url, {
             method: 'GET',
@@ -42,9 +45,9 @@ export default function QuizPage() {
                 if (!res.ok) throw new Error(`API returned ${res.status}`);
                 return res.json();
             })
-            .then((json: Question[]) => {
+            .then((json) => {
                 console.log("Fetched quiz data:", json);
-                setData({ question: json }); // wrap it in the expected shape
+                setData({ questions: json.questions });  // ✅ extract the array
                 setStatus("success");
             })
             .catch(err => {
