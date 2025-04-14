@@ -18,25 +18,23 @@ export default function QuizDetailPage() {
 
   useEffect(() => {
     const fetchQuestions = async () => {
-      console.log("Fetching for quiz id:", id);
+      console.log("Quiz ID:", id); // DEBUG
       try {
         const res = await fetch(`/api/student/quiz/${id}`);
+        console.log("Response:", res); // DEBUG
+        if (!res.ok) throw new Error("Failed to load quiz");
         const data = await res.json();
-        console.log("API response:", data);
-  
-        if (res.ok) {
-          setQuestions(data.questions);
-        } else {
-          console.error("API error:", data.error);
-        }
-      } catch (err) {
-        console.error("Fetch failed:", err);
+        console.log("Data:", data); // DEBUG
+        setQuestions(data.questions);
+      } catch (err: any) {
+        console.error("Error fetching questions:", err);
+        setError(err.message);
       } finally {
         setLoading(false);
       }
     };
   
-    if (id) fetchQuestions();
+    if (id) fetchQuestions(); // ✅ Important: Only fetch if ID is available
   }, [id]);
   
 
@@ -86,3 +84,7 @@ export default function QuizDetailPage() {
     </div>
   );
 }
+function setError(message: any) {
+  throw new Error("Function not implemented.");
+}
+
