@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import PerformanceCard from "@/components/performanceCard";
 
 interface Submission {
   id: string;
@@ -18,14 +19,17 @@ export default function PerformancePage() {
   useEffect(() => {
     const fetchSubmissions = async () => {
       try {
-        const res = await fetch("/api/stdent/performance");
-        if (!res.ok) throw new Error("Failed to fetch performance data");
+        const response = await fetch("/api/stdent/performance");
+        const data = await response.json();
 
-        const data = await res.json();
+        if (data.error) {
+          throw new Error(data.error);
+        }
+
         setSubmissions(data);
       } catch (err: any) {
+        setError("Failed to fetch performance data");
         console.error(err);
-        setError("Error loading performance data");
       } finally {
         setLoading(false);
       }
@@ -34,30 +38,26 @@ export default function PerformancePage() {
     fetchSubmissions();
   }, []);
 
-  if (loading) return <p className="p-4">Loading performance...</p>;
+  if (loading) return <p className="p-4">Loading performance data...</p>;
   if (error) return <p className="p-4 text-red-500">{error}</p>;
 
   return (
-    <div className="max-w-3xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Quiz Performance</h1>
-      {submissions.length === 0 ? (
-        <p>No quiz submissions yet.</p>
-      ) : (
-        <ul className="space-y-4">
-          {submissions.map((submission) => (
-            <li
+    <div className="container mx-auto p-6">
+      <h1 className="text-2xl font-bold mb-4">Your Performance</h1>
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        {submissions.length === 0 ? (
+          <p>No submissions found.</p>
+        ) : (
+          submissions.map((submission) => (
+            <PerformanceCard
               key={submission.id}
-              className="border border-gray-300 rounded-lg p-4 shadow-sm"
-            >
-              <h2 className="text-lg font-semibold">{submission.quiz.title}</h2>
-              <p className="text-sm text-gray-600">
-                Submitted: {new Date(submission.submitted_at).toLocaleString()}
-              </p>
-              <p className="text-blue-600 font-medium">Score: {submission.score}</p>
-            </li>
-          ))}
-        </ul>
-      )}
+              quizTitle={submission.quiz.title}
+              score={submission.score}
+              submittedAt={submission.submitted_at}
+            />
+          ))
+        )}
+      </div>
     </div>
   );
 }

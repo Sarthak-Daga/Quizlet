@@ -18,7 +18,6 @@ export default function Sidebar({
     { icon: "📊", text: "Dashboard", href: "/student/dashboard" },
     { icon: "📝", text: "Quizzes", href: "/student/quizzes" },
     { icon: "📈", text: "Performance", href: "/student/performance" },
-    { icon: "⚙️", text: "Settings", href: "/student/settings" },
   ];
 
   return (
