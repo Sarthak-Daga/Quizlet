@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0078cca-2fc1-4959-80cf-d31d3871a30d" name="Changes" comment="Jaydeep Man!!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/student/quiz/[quizId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/student/quiz/[quizId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="c0078cca-2fc1-4959-80cf-d31d3871a30d" name="Changes" comment="Me man!! This time I did itt!!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +91,7 @@
       <workItem from="1744618880882" duration="4510000" />
       <workItem from="1744628143027" duration="4126000" />
       <workItem from="1744633624860" duration="144000" />
-      <workItem from="1744634293122" duration="6731000" />
+      <workItem from="1744634293122" duration="7535000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit , Project Setup">
       <option name="closed" value="true" />
@@ -123,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744637002273</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Me man!! This time I did itt!!">
+      <option name="closed" value="true" />
+      <created>1744641895663</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744641895663</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +136,7 @@
     <MESSAGE value="I am done with this project" />
     <MESSAGE value="I am done with this project.." />
     <MESSAGE value="Jaydeep Man!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jaydeep Man!!" />
+    <MESSAGE value="Me man!! This time I did itt!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Me man!! This time I did itt!!" />
   </component>
 </project>
